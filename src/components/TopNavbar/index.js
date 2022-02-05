@@ -54,7 +54,7 @@ export default function TopNavbar() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent' }}>
+    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent', height: 'auto' }}>
       <ToolbarStyle
         disableGutters
         sx={{
