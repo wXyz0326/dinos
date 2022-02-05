@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './Router';
+import Routes from './Routes';
 import ThemeConfig from './theme';
 
 export default function App() {
