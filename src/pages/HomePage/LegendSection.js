@@ -1,8 +1,7 @@
 import React from 'react';
-import { Box, Button, Card, Grid, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Grid, Paper, Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { grey, purple } from '@mui/material/colors';
-import { bgcolor } from '@mui/system';
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[100]),
