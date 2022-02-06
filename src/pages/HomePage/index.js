@@ -5,6 +5,7 @@ import HeroSection from './HeroSection';
 import LegendSection from './LegendSection';
 import PopularSection from './PopularSection';
 import RoadmapSection from './RoadmapSection';
+import SpecialSection from './SpecialSection';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <PopularSection />
       <DaoSection />
       <RoadmapSection />
+      <SpecialSection />
     </>
   );
 }
