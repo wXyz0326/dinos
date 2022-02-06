@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../components/Footer';
 import TopNavbar from '../../components/TopNavbar';
 import DaoSection from './DaoSection';
 import FaqSection from './FaqSection';
@@ -21,6 +22,7 @@ export default function HomePage() {
       <SpecialSection />
       <OurTeamSection />
       <FaqSection />
+      <Footer />
     </>
   );
 }
