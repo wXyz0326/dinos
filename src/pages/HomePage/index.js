@@ -16,15 +16,15 @@ export default function HomePage() {
     <>
       <TopNavbar />
       <HeroSection />
-      <MintSection />
-      <LegendSection />
-      <PopularSection />
-      <DaoSection />
-      <RoadmapSection />
-      <SpecialSection />
-      <OurTeamSection />
-      <FaqSection />
-      <Footer />
+      {/* <MintSection /> */}
+      {/* <LegendSection /> */}
+      {/* <PopularSection /> */}
+      {/* <DaoSection /> */}
+      {/* <RoadmapSection /> */}
+      {/* <SpecialSection /> */}
+      {/* <OurTeamSection /> */}
+      {/* <FaqSection /> */}
+      {/* <Footer /> */}
     </>
   );
 }

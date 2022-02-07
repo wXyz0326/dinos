@@ -13,9 +13,7 @@ code {
 }
 
 .skewBar {
-  margin-top: 10px;
   width: 100%;
-  height: 60px;
   background: #424242;
   z-index: 999999;
   bottom: 0;
