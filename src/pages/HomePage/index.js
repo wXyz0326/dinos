@@ -16,7 +16,7 @@ export default function HomePage() {
     <>
       <TopNavbar />
       <HeroSection />
-      {/* <MintSection /> */}
+      <MintSection />
       {/* <LegendSection /> */}
       {/* <PopularSection /> */}
       {/* <DaoSection /> */}
