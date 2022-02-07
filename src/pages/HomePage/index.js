@@ -5,6 +5,7 @@ import DaoSection from './DaoSection';
 import FaqSection from './FaqSection';
 import HeroSection from './HeroSection';
 import LegendSection from './LegendSection';
+import MintSection from './MintSection';
 import OurTeamSection from './OurTeamSection';
 import PopularSection from './PopularSection';
 import RoadmapSection from './RoadmapSection';
@@ -15,6 +16,7 @@ export default function HomePage() {
     <>
       <TopNavbar />
       <HeroSection />
+      <MintSection />
       <LegendSection />
       <PopularSection />
       <DaoSection />
