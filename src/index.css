@@ -28,9 +28,23 @@ code {
   transform-origin: left bottom;
 }
 
+.roadmapLineRight-active {
+  height: 10px;
+  background: #ca3bfd;
+  bottom: 0;
+  transform-origin: left bottom;
+}
+
 .roadmapLineLeft {
   height: 10px;
   background: #424242;
+  bottom: 0;
+  transform-origin: right bottom;
+}
+
+.roadmapLineLeft-active {
+  height: 10px;
+  background: #ca3bfd;
   bottom: 0;
   transform-origin: right bottom;
 }
