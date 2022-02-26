@@ -17,8 +17,8 @@ code {
   background: #424242;
   z-index: 999999;
   bottom: 0;
-  transform-origin: left bottom;
-  transform: skewY(-3deg);
+  /* transform-origin: left bottom; */
+  /* transform: skewY(-3deg); */
 }
 
 .roadmapLineRight {

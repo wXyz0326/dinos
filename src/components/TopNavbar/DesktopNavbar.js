@@ -2,14 +2,13 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import { Box, Link, Stack } from '@mui/material';
+import { Badge, Box, Link, Stack } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
 const LinkStyle = styled(Link)(({ theme }) => ({
   ...theme.typography.subtitle2,
   color: theme.palette.text.primary,
-  marginRight: theme.spacing(5),
   transition: theme.transitions.create('opacity', {
     duration: theme.transitions.duration.shortest
   }),
@@ -31,7 +30,6 @@ function IconBullet({ type = 'item' }) {
       <Box
         component="span"
         sx={{
-          ml: '2px',
           width: 4,
           height: 4,
           borderRadius: '50%',
@@ -100,17 +98,33 @@ export default function DesktopNavbar({ isOffset, isHome, navConfig }) {
 
   return (
     <Stack direction="row">
-      {navConfig.map((link) => (
-        <MenuDesktopItem
-          key={link.title}
-          item={link}
-          pathname={pathname}
-          isOpen={open}
-          onOpen={handleOpen}
-          onClose={handleClose}
-          isOffset={isOffset}
-          isHome={isHome}
-        />
+      {navConfig.map((link) => link.ready ? (
+        <Stack key={link.title} sx={{ px: 7, borderLeft: '1px solid #F2F2F2' }} justifyContent="center">
+          <MenuDesktopItem
+            item={link}
+            pathname={pathname}
+            isOpen={open}
+            onOpen={handleOpen}
+            onClose={handleClose}
+            isOffset={isOffset}
+            isHome={isHome}
+          />
+        </Stack>
+      ) : (
+
+        <Stack key={link.title} sx={{ px: 7, borderLeft: '1px solid #F2F2F2' }} justifyContent="center">
+          <Badge badgeContent="SOON" color="primary">
+            <MenuDesktopItem
+              item={link}
+              pathname={pathname}
+              isOpen={open}
+              onOpen={handleOpen}
+              onClose={handleClose}
+              isOffset={isOffset}
+              isHome={isHome}
+            />
+          </Badge>
+        </Stack>
       ))}
     </Stack>
   );

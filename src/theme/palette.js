@@ -29,12 +29,12 @@ const GREY = {
 };
 
 const PRIMARY = {
-  lighter: '#C8FACD',
-  light: '#5BE584',
-  main: '#00AB55',
-  dark: '#007B55',
-  darker: '#005249',
-  contrastText: '#fff'
+  lighter: '#CA3BFD',
+  light: '#CA3BFD',
+  main: '#CA3BFD',
+  dark: '#CA3BFD',
+  darker: '#CA3BFD',
+  contrastText: '#F2F2F2'
 };
 const SECONDARY = {
   lighter: '#D6E4FF',
@@ -42,7 +42,7 @@ const SECONDARY = {
   main: '#3366FF',
   dark: '#1939B7',
   darker: '#091A7A',
-  contrastText: '#fff'
+  contrastText: '#F2F2F2'
 };
 const INFO = {
   lighter: '#D0F2FF',
@@ -50,7 +50,7 @@ const INFO = {
   main: '#1890FF',
   dark: '#0C53B7',
   darker: '#04297A',
-  contrastText: '#fff'
+  contrastText: '#F2F2F2'
 };
 const SUCCESS = {
   lighter: '#E9FCD4',
@@ -74,7 +74,7 @@ const ERROR = {
   main: '#FF4842',
   dark: '#B72136',
   darker: '#7A0C2E',
-  contrastText: '#fff'
+  contrastText: '#F2F2F2'
 };
 
 const GRADIENTS = {
@@ -94,7 +94,7 @@ const CHART_COLORS = {
 };
 
 const COMMON = {
-  common: { black: '#000', white: '#fff' },
+  common: { black: '#000', white: '#F2F2F2' },
   primary: { ...PRIMARY },
   secondary: { ...SECONDARY },
   info: { ...INFO },
@@ -120,14 +120,14 @@ const palette = {
   light: {
     ...COMMON,
     text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
-    background: { paper: '#fff', default: '#fff', neutral: GREY[200] },
+    background: { paper: '#F2F2F2', default: '#F2F2F2', neutral: GREY[200] },
     action: { active: GREY[600], ...COMMON.action }
   },
   dark: {
     ...COMMON,
-    text: { primary: '#fff', secondary: GREY[500], disabled: GREY[600] },
-    background: { paper: GREY[800], default: GREY[900], neutral: GREY[500_16] },
-    action: { active: GREY[500], ...COMMON.action }
+    text: { primary: '#F2F2F2', secondary: '#CA3BFD', disabled: '#F2F2F2' },
+    background: { paper: '#0F1011', default: '#0F1011', neutral: '#0F1011' },
+    action: { active: '#CA3BFD', ...COMMON.action }
   }
 };
 

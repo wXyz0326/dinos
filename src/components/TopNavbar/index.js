@@ -12,14 +12,16 @@ import MobileNavbar from './MobileNavbar';
 // ----------------------------------------------------------------------
 
 const navConfig = [
-  { title: 'About us', path: '#aboutUs' },
-  { title: 'Roadmap', path: '#roadmap' },
-  { title: 'Mission', path: '#mission' },
-  { title: 'Team', path: '#team' }
+  { title: 'Home', path: '/', ready: true },
+  { title: 'Collection', path: '/collection', ready: false },
+  { title: 'Roadmap', path: '/roadmap', ready: true },
+  { title: 'DAO', path: '/dao', ready: true },
+  { title: 'Charity', path: '/charity', ready: true },
+  { title: 'Shop', path: '/shop', ready: false },
 ];
 
 const APP_BAR_MOBILE = 64;
-const APP_BAR_DESKTOP = 88;
+const APP_BAR_DESKTOP = 60;
 
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   height: APP_BAR_MOBILE,
@@ -54,7 +56,7 @@ export default function TopNavbar() {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   return (
-    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent', height: 'auto' }}>
+    <AppBar sx={{ boxShadow: 0, bgcolor: 'transparent', height: 'auto', borderBottom: '1px solid #F2F2F2' }}>
       <ToolbarStyle
         disableGutters
         sx={{
@@ -68,21 +70,31 @@ export default function TopNavbar() {
           maxWidth="2xl"
           sx={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            height: '100%'
           }}
         >
-          <RouterLink to="/">
-            <img src="/assets/images/logo.png" alt="logo" width={isDesktop ? '60' : '50'} />
-          </RouterLink>
+          <Stack pr={6} pl={3} justifyContent="center" sx={{ borderRight: '1px solid #F2F2F2' }}>
+            <RouterLink to="/">
+              <img
+                src="/assets/images/logo.png"
+                alt="logo"
+                width={isDesktop ? '60' : '50'}
+              />
+            </RouterLink>
+          </Stack>
 
           <Box sx={{ flexGrow: 1 }} />
 
           <MHidden width="mdDown">
-            <DesktopNavbar isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            <DesktopNavbar
+              isOffset={isOffset}
+              isHome={isHome}
+              navConfig={navConfig}
+            />
           </MHidden>
 
-          <Stack direction="row" justifyContent="center" alignItems="center">
+          <Stack direction="row" justifyContent="center" alignItems="center" sx={{ borderLeft: '1px solid #F2F2F2' }} pl={3}>
             <IconButton sx={{ color: grey[100] }}>
               <Icon icon="ant-design:instagram-filled" />
             </IconButton>
