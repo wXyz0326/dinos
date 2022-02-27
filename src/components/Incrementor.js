@@ -29,7 +29,7 @@ export default function Incrementer({ available }) {
       }}
     >
       <MIconButton size="small" color="inherit" disabled={value <= 1} onClick={decrementQuantity}>
-        <Icon icon={minusFill} width={16} height={16} />
+        <Icon icon={minusFill} width={16} height={24} />
       </MIconButton>
       <Typography
         variant="body2"
@@ -43,7 +43,7 @@ export default function Incrementer({ available }) {
         {value}
       </Typography>
       <MIconButton size="small" color="inherit" disabled={value >= available} onClick={incrementQuantity}>
-        <Icon icon={plusFill} width={16} height={16} />
+        <Icon icon={plusFill} width={16} height={24} />
       </MIconButton>
     </Box>
   );

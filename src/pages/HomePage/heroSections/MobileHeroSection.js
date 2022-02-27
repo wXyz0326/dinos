@@ -8,7 +8,7 @@ import Incrementer from '../../../components/Incrementor';
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[100]),
-  fontSize: { xl: 16, lg: 16, md: 16, sm: 14, xs: 8 },
+  fontSize: 16,
   width: '10%',
   backgroundColor: grey[100],
   '&:hover': {

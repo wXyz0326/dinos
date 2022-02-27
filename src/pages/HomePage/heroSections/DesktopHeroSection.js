@@ -1,15 +1,14 @@
 import React from 'react';
 import { Box, Button, Stack, Typography, styled } from '@mui/material';
 import { grey, purple } from '@mui/material/colors';
-import { Icon } from '@iconify/react';
 import Incrementer from '../../../components/Incrementor';
 
 /* ------------------------------------------------------------------------------ */
 
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[100]),
-  fontSize: { xl: 16, lg: 16, md: 16, sm: 14, xs: 8 },
-  width: '10%',
+  fontSize: 20,
+  width: '20%',
   backgroundColor: grey[100],
   '&:hover': {
     backgroundColor: grey[400],

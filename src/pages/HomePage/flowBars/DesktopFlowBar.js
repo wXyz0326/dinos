@@ -3,9 +3,13 @@ import { Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Icon } from '@iconify/react';
 
-export default function DesktopFlowBar() {
+export default function DesktopFlowBar({ customSx }) {
   return (
-    <Stack className="skewBar" sx={{ height: { xl: 60, lg: 60, md: 40, sm: 30 } }} justifyContent="center">
+    <Stack
+      className="skewBar"
+      sx={{ height: { xl: 60, lg: 60, md: 40, sm: 30 }, ...customSx }}
+      justifyContent="center"
+    >
       <Stack direction="row" spacing={5}>
         {
           [0, 1, 2, 3, 4].map(itemIndex => (

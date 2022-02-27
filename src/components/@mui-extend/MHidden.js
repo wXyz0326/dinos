@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-// material
 import { useMediaQuery } from '@mui/material';
 
 // ----------------------------------------------------------------------
