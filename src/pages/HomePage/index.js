@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
-import { grey } from '@mui/material/colors';
-import { Icon } from '@iconify/react';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopHeroSection from './heroSections/DesktopHeroSection';
 import MobileHeroSection from './heroSections/MobileHeroSection';
+import DesktopFlowBar from './flowBars/DesktopFlowBar';
+import MobileFlowBar from './flowBars/MobileFlowBar';
 
 export default function HomePage() {
 
@@ -12,10 +12,12 @@ export default function HomePage() {
     <>
       <MHidden width="mdDown">
         <DesktopHeroSection />
+        <DesktopFlowBar />
       </MHidden>
 
       <MHidden width="mdUp">
         <MobileHeroSection />
+        <MobileFlowBar />
       </MHidden>
 
       <Stack maxWidth="xl" spacing={2} mx="auto" mt={16}>
@@ -52,23 +54,12 @@ export default function HomePage() {
           </Grid>
         </Box>
       </Stack>
-
-      <Stack className="skewBar" sx={{ height: { xl: 60, lg: 60, md: 40, sm: 30 } }} justifyContent="center" mt={20}>
-        <Stack direction="row" spacing={5}>
-          {
-            [0, 1, 2, 3, 4].map(itemIndex => (
-              <marquee key={itemIndex}>
-                <Stack direction="row" spacing={5} alignItems="center">
-                  <Icon icon="emojione-monotone:eight-pointed-star" />
-                  <Typography textTransform="uppercase" color={grey[100]} fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}>
-                    More than just a fashion
-                  </Typography>
-                </Stack>
-              </marquee>
-            ))
-          }
-        </Stack>
-      </Stack>
+      <MHidden width="mdDown">
+        <DesktopFlowBar />
+      </MHidden>
+      <MHidden width="mdUp">
+        <MobileFlowBar />
+      </MHidden>
     </>
   );
 };
