@@ -20,7 +20,7 @@ const navConfig = [
   { title: 'Shop', path: '/shop', ready: false },
 ];
 
-const APP_BAR_MOBILE = 64;
+const APP_BAR_MOBILE = 30;
 const APP_BAR_DESKTOP = 60;
 
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
@@ -74,7 +74,12 @@ export default function TopNavbar() {
             height: '100%'
           }}
         >
-          <Stack pr={6} pl={3} justifyContent="center" sx={{ borderRight: '1px solid #F2F2F2' }}>
+          <Stack
+            pr={{ xl: 6, lg: 3, md: 6, sm: 3, xs: 3 }}
+            pl={{ xl: 3, lg: 1, md: 3 }}
+            justifyContent="center"
+            sx={{ borderRight: { xl: '1px solid #F2F2F2', lg: '1px solid #F2F2F2', md: '1px solid #F2F2F2', sm: 'none' } }}
+          >
             <RouterLink to="/">
               <img
                 src="/assets/images/logo.png"
@@ -92,21 +97,21 @@ export default function TopNavbar() {
               isHome={isHome}
               navConfig={navConfig}
             />
+
+            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ borderLeft: '1px solid #F2F2F2' }} pl={3}>
+              <IconButton sx={{ color: '#F2F2F2' }}>
+                <Icon icon="ant-design:instagram-filled" />
+              </IconButton>
+
+              <IconButton sx={{ color: '#F2F2F2' }}>
+                <Icon icon="akar-icons:discord-fill" />
+              </IconButton>
+
+              <IconButton sx={{ color: '#F2F2F2' }}>
+                <Icon icon="akar-icons:twitter-fill" />
+              </IconButton>
+            </Stack>
           </MHidden>
-
-          <Stack direction="row" justifyContent="center" alignItems="center" sx={{ borderLeft: '1px solid #F2F2F2' }} pl={3}>
-            <IconButton sx={{ color: grey[100] }}>
-              <Icon icon="ant-design:instagram-filled" />
-            </IconButton>
-
-            <IconButton sx={{ color: grey[100] }}>
-              <Icon icon="akar-icons:discord-fill" />
-            </IconButton>
-
-            <IconButton sx={{ color: grey[100] }}>
-              <Icon icon="akar-icons:twitter-fill" />
-            </IconButton>
-          </Stack>
 
           <MHidden width="mdUp">
             <MobileNavbar isOffset={isOffset} isHome={isHome} navConfig={navConfig} />

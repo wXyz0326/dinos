@@ -63,7 +63,7 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
         ...(isHome && { color: 'common.white' }),
         ...(isOffset && { color: 'text.primary' }),
         ...(isActive && { color: 'primary.main' }),
-        fontSize: 20
+        fontSize: { xl: 20, lg: 16, md: 12 }
       }}
     >
       {title}
@@ -99,7 +99,11 @@ export default function DesktopNavbar({ isOffset, isHome, navConfig }) {
   return (
     <Stack direction="row">
       {navConfig.map((link) => link.ready ? (
-        <Stack key={link.title} sx={{ px: 7, borderLeft: '1px solid #F2F2F2' }} justifyContent="center">
+        <Stack 
+          key={link.title} 
+          sx={{ px: { xl: 7, md: 4 }, borderLeft: '1px solid #F2F2F2' }} 
+          justifyContent="center"
+        >
           <MenuDesktopItem
             item={link}
             pathname={pathname}
@@ -112,8 +116,12 @@ export default function DesktopNavbar({ isOffset, isHome, navConfig }) {
         </Stack>
       ) : (
 
-        <Stack key={link.title} sx={{ px: 7, borderLeft: '1px solid #F2F2F2' }} justifyContent="center">
-          <Badge badgeContent="SOON" color="primary">
+        <Stack 
+          key={link.title} 
+          sx={{ px: { xl: 7, md: 4 }, borderLeft: '1px solid #F2F2F2' }} 
+          justifyContent="center"
+        >
+          <Badge badgeContent="SOON" color="primary" sx={{ fontSize: 10 }}>
             <MenuDesktopItem
               item={link}
               pathname={pathname}

@@ -1,10 +1,23 @@
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
-import { useState, useEffect } from 'react';
 import menu2Fill from '@iconify/icons-eva/menu-2-fill';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
-import { alpha, styled } from '@mui/material/styles';
-import { Box, List, Drawer, Link, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import {
+  Container,
+  Toolbar,
+  List,
+  Drawer,
+  Link,
+  ListItemText,
+  ListItemButton,
+  Stack,
+  IconButton,
+  Badge,
+  Typography,
+  Box
+} from '@mui/material';
 import { grey } from '@mui/material/colors';
 import Scrollbar from '../Scrollbar';
 import MIconButton from '../@mui-extend/MIconButton';
@@ -23,7 +36,13 @@ const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 
-// ----------------------------------------------------------------------
+const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
+  height: 30,
+  transition: theme.transitions.create(['height', 'background-color'], {
+    easing: theme.transitions.easing.easeInOut,
+    duration: theme.transitions.duration.shorter
+  })
+}));
 
 MenuMobileItem.propTypes = {
   item: PropTypes.object,
@@ -33,7 +52,7 @@ MenuMobileItem.propTypes = {
 };
 
 function MenuMobileItem({ item, isActive }) {
-  const { title, path, icon } = item;
+  const { title, path } = item;
 
   return (
     <ListItemStyle
@@ -41,16 +60,32 @@ function MenuMobileItem({ item, isActive }) {
       component={Link}
       href={path}
       sx={{
-        ...(isActive && {
-          color: grey[100],
-          fontWeight: 'fontWeightMedium',
-          bgcolor: (theme) => alpha(theme.palette.primary.main, theme.palette.action.selectedOpacity)
-        }),
-        color: grey[100]
+        ...(isActive && { color: '#CA3BFD' }),
+        color: '#F2F2F2',
+        py: 5
       }}
     >
-      <ListItemIcon>{icon}</ListItemIcon>
-      <ListItemText disableTypography primary={title} />
+      {
+        item.ready ? (
+          <ListItemText
+            primary={title}
+            primaryTypographyProps={{ sx: { fontSize: 26, fontWeight: 800, textTransform: 'uppercase' } }}
+            sx={{ textAlign: 'center' }}
+          />
+        ) : (
+
+          <ListItemText
+            primary={
+              <Badge badgeContent="SOON" color="primary" sx={{ fontSize: 10 }}>
+                <Typography fontSize={26} fontWeight={800} textTransform="uppercase">{title}</Typography>
+              </Badge>
+            }
+            sx={{ textAlign: 'center' }}
+          />
+
+        )
+      }
+
     </ListItemStyle>
   );
 }
@@ -60,7 +95,9 @@ MobileNavbar.propTypes = {
   isHome: PropTypes.bool
 };
 
-export default function MobileNavbar({ isOffset, isHome, navConfig }) {
+// ----------------------------------------------------------------------
+
+export default function MobileNavbar({ navConfig }) {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -83,11 +120,7 @@ export default function MobileNavbar({ isOffset, isHome, navConfig }) {
     <>
       <MIconButton
         onClick={handleDrawerOpen}
-        sx={{
-          ml: 1,
-          ...(isHome && { color: 'common.white' }),
-          ...(isOffset && { color: 'text.primary' })
-        }}
+        sx={{ ml: 1, color: '#F2F2F2' }}
       >
         <Icon icon={menu2Fill} />
       </MIconButton>
@@ -96,28 +129,81 @@ export default function MobileNavbar({ isOffset, isHome, navConfig }) {
         open={mobileOpen}
         onClose={handleDrawerClose}
         ModalProps={{ keepMounted: true }}
-        PaperProps={{ sx: { pb: 5, width: 260 } }}
+        PaperProps={{ sx: { height: '100%' } }}
+        anchor="top"
       >
-        <Scrollbar>
-          <Link component={RouterLink} to="/" sx={{ display: 'inline-flex' }}>
-            <Box
-              component="img"
-              src="/assets/images/logo.png"
-              sx={{ my: 2, mx: PADDING }}
-              width={50}
-            />
-          </Link>
+        <ToolbarStyle disableGutters sx={{ borderBottom: '1px solid #F2F2F2' }}>
+          <Container
+            maxWidth="2xl"
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              height: '100%'
+            }}
+          >
+            <Stack px={3} justifyContent="center">
+              <RouterLink to="/">
+                <img
+                  src="/assets/images/logo.png"
+                  alt="logo"
+                  width={50}
+                />
+              </RouterLink>
+            </Stack>
 
-          <List disablePadding>
+            <MIconButton
+              onClick={handleDrawerClose}
+              sx={{ ml: 1, color: '#F2F2F2' }}
+            >
+              <Icon icon="akar-icons:cross" />
+            </MIconButton>
+          </Container>
+        </ToolbarStyle>
+
+        <Scrollbar sx={{ position: 'relative' }}>
+          <Box position="absolute" top="30%" width="100%">
+            <Typography
+              fontSize={80}
+              fontWeight={900}
+              textTransform="uppercase"
+              color={grey[900]}
+              textAlign="center"
+              mt={20}
+              sx={{ filter: 'blur(4px)' }}
+            >
+              DRIPPING dino`s
+            </Typography>
+          </Box>
+          <List disablePadding sx={{ my: 6 }}>
             {navConfig.map((link) => (
               <MenuMobileItem
                 key={link.title}
                 item={link}
-                isActive={pathname === link.path}
+                isActive={pathname === `/${link.path}`}
               />
             ))}
           </List>
+          <Stack direction="row" justifyContent="center" alignItems="center">
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+              <Icon icon="ant-design:instagram-filled" />
+            </IconButton>
+
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+              <Icon icon="akar-icons:discord-fill" />
+            </IconButton>
+
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+              <Icon icon="akar-icons:twitter-fill" />
+            </IconButton>
+          </Stack>
         </Scrollbar>
+        <Box width="45%" position="absolute" bottom={0}>
+          <Box
+            component="img"
+            src="/assets/images/hero.png"
+            width="100%"
+          />
+        </Box>
       </Drawer>
     </>
   );
