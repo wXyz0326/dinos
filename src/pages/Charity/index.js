@@ -1,6 +1,5 @@
 import React from 'react';
-import { Stack, Typography, Box, Grid, Link } from '@mui/material';
-import { grey, purple } from '@mui/material/colors';
+import { Typography, Box } from '@mui/material';
 
 export default function Charity() {
   return (

@@ -2,9 +2,9 @@ import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopHeroSection from './heroSections/DesktopHeroSection';
-import MobileHeroSection from './heroSections/MobileHeroSection';
+import IPadHeroSection from './heroSections/IPadHeroSection';
 import DesktopFlowBar from './flowBars/DesktopFlowBar';
-import MobileFlowBar from './flowBars/MobileFlowBar';
+import IPadFlowBar from './flowBars/IPadFlowBar';
 
 export default function HomePage() {
   return (
@@ -15,8 +15,8 @@ export default function HomePage() {
       </MHidden>
 
       <MHidden width="mdUp">
-        <MobileHeroSection />
-        <MobileFlowBar />
+        <IPadHeroSection />
+        <IPadFlowBar />
       </MHidden>
 
       <Stack mx={{ xl: 16, sm: 6 }} mt={16} spacing={12}>
@@ -36,7 +36,7 @@ export default function HomePage() {
           </Grid>
         </Box>
 
-        <Box minHeight={{ xl: '720px', md: '600px',  sm: '450px' }}>
+        <Box minHeight={{ xl: '720px', md: '600px', sm: '450px' }}>
           <Grid container alignItems="center" spacing={{ xl: 12, sm: 4 }}>
             <Grid item md={4} sm={6}>
               <Box position="relative">
@@ -57,7 +57,7 @@ export default function HomePage() {
         <DesktopFlowBar />
       </MHidden>
       <MHidden width="mdUp">
-        <MobileFlowBar />
+        <IPadFlowBar />
       </MHidden>
     </Box>
   );

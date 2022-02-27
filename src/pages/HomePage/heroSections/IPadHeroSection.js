@@ -18,7 +18,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 /* ------------------------------------------------------------------------------ */
 
-export default function MobileHeroSection() {
+export default function IPadHeroSection() {
   return (
     <Box position="relative" mt={10}>
       <Box position="absolute" top="20%" width="100%">

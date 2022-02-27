@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Icon } from '@iconify/react';
 
-export default function MobileFlowBar({ customSx }) {
+export default function IPadFlowBar({ customSx }) {
   return (
     <Stack className="skewBar" sx={{ height: 60, ...customSx }} justifyContent="center">
       <Stack direction="row" spacing={5}>
