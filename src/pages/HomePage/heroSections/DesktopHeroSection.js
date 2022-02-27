@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button, Stack, Typography, styled } from '@mui/material';
 import { grey, purple } from '@mui/material/colors';
 import { Icon } from '@iconify/react';
-import Incrementer from '../../components/Incrementor';
+import Incrementer from '../../../components/Incrementor';
 
 /* ------------------------------------------------------------------------------ */
 
@@ -18,7 +18,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 /* ------------------------------------------------------------------------------ */
 
-export default function HeroSection() {
+export default function DesktopHeroSection() {
   return (
     <>
       <Stack

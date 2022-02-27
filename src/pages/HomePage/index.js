@@ -2,12 +2,22 @@ import React from 'react';
 import { Box, Grid, Stack, Typography } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import { Icon } from '@iconify/react';
-import HeroSection from './HeroSection';
+import MHidden from '../../components/@mui-extend/MHidden';
+import DesktopHeroSection from './heroSections/DesktopHeroSection';
+import MobileHeroSection from './heroSections/MobileHeroSection';
 
 export default function HomePage() {
+
   return (
     <>
-      <HeroSection />
+      <MHidden width="mdDown">
+        <DesktopHeroSection />
+      </MHidden>
+
+      <MHidden width="mdUp">
+        <MobileHeroSection />
+      </MHidden>
+
       <Stack maxWidth="xl" spacing={2} mx="auto" mt={16}>
         <Box>
           <Grid container alignItems="center" spacing={12}>
