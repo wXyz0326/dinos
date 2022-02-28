@@ -14,7 +14,7 @@ export default function IPadCharity() {
           position="absolute"
           right={0}
           top={80}
-          zIndex={99}
+          zIndex={1}
         />
         {/* dinosaurs */}
         <Stack direction="row" justifyContent="center" pt={20}>
@@ -22,7 +22,7 @@ export default function IPadCharity() {
             component="img"
             src="/assets/images/twin_dinos.png"
             alt="twin_dinos"
-            zIndex={999}
+            zIndex={2}
             width={500}
           />
         </Stack>
@@ -35,7 +35,7 @@ export default function IPadCharity() {
           position="absolute"
           right={20}
           top={80}
-          zIndex={9999}
+          zIndex={3}
           sx={{ opacity: 0.5 }}
         />
         {/* blur_black_bar */}
@@ -45,7 +45,7 @@ export default function IPadCharity() {
           position="absolute"
           right={0}
           top={500}
-          zIndex={99999}
+          zIndex={4}
           sx={{ background: '#0F1011', filter: 'blur(5px)' }}
         />
       </Box>

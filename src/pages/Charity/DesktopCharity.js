@@ -4,7 +4,7 @@ import { Typography, Box } from '@mui/material';
 export default function DesktopCharity() {
   return (
     <Box position="relative">
-      <Box position="absolute" top={300} ml={20} zIndex={99999} width="35%">
+      <Box position="absolute" top={300} ml={20} zIndex={5} width="35%">
         <Typography fontSize={48} fontWeight={700} textTransform="uppercase">
           Charity&volunteering
         </Typography>
@@ -21,7 +21,7 @@ export default function DesktopCharity() {
         position="absolute"
         right={0}
         top={80}
-        zIndex={99}
+        zIndex={1}
       />
       {/* dinosaurs */}
       <Box
@@ -29,7 +29,7 @@ export default function DesktopCharity() {
         src="/assets/images/twin_dinos.png"
         alt="twin_dinos"
         position="absolute"
-        zIndex={999}
+        zIndex={2}
         right={220}
         top={250}
         width={700}
@@ -43,7 +43,7 @@ export default function DesktopCharity() {
         position="absolute"
         right={20}
         top={80}
-        zIndex={9999}
+        zIndex={3}
         sx={{ opacity: 0.5 }}
       />
       {/* blur_black_bar */}
@@ -55,7 +55,7 @@ export default function DesktopCharity() {
         position="absolute"
         right={0}
         top={620}
-        zIndex={99999}
+        zIndex={4}
       />
     </Box>
   );
