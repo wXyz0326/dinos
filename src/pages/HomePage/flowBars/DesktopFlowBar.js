@@ -22,7 +22,7 @@ export default function DesktopFlowBar({ customSx }) {
                   fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}
                   fontFamily="'Dela Gothic One', cursive"
                 >
-                  More than just a fashion
+                  More than just fashion
                 </Typography>
               </Stack>
             </marquee>

@@ -19,7 +19,7 @@ export default function IPadFlowBar({ customSx }) {
                   fontFamily="'Dela Gothic One', cursive"
                   fontWeight={500}
                 >
-                  More than just a fashion
+                  More than just fashion
                 </Typography>
               </Stack>
             </marquee>
