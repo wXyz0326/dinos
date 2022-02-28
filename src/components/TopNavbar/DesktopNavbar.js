@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 import { Badge, Box, Link, Stack } from '@mui/material';
 
@@ -56,9 +56,9 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
   const isActive = pathname === path;
   return (
     <LinkStyle
-      // to={path}
-      // component={RouterLink}
-      href={path}
+      to={path}
+      component={RouterLink}
+      // href={path}
       sx={{
         ...(isHome && { color: 'common.white' }),
         ...(isOffset && { color: 'text.primary' }),

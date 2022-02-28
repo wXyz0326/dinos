@@ -56,9 +56,8 @@ function MenuMobileItem({ item, isActive }) {
 
   return (
     <ListItemStyle
-      // to={path}
+      to={path}
       component={Link}
-      href={path}
       sx={{
         ...(isActive && { color: '#CA3BFD' }),
         color: '#F2F2F2',

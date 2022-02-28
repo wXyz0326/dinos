@@ -5,6 +5,7 @@ import DesktopHeroSection from './heroSections/DesktopHeroSection';
 import IPadHeroSection from './heroSections/IPadHeroSection';
 import DesktopFlowBar from './flowBars/DesktopFlowBar';
 import IPadFlowBar from './flowBars/IPadFlowBar';
+import IPhoneHeroSection from './heroSections/IPhoneHeroSection';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,10 @@ export default function HomePage() {
       <MHidden width="mdUp">
         <IPadHeroSection />
         <IPadFlowBar />
+      </MHidden>
+
+      <MHidden width="smUp">
+        <IPhoneHeroSection />
       </MHidden>
 
       <Stack mx={{ xl: 16, sm: 6 }} mt={16} spacing={12}>
