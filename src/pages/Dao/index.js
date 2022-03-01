@@ -2,6 +2,7 @@ import React from 'react';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopDao from './DesktopDao';
 import IPadDao from './IPadDao';
+import IPhoneDao from './IPhoneDao';
 
 export default function Dao() {
   return (
@@ -10,7 +11,12 @@ export default function Dao() {
         <DesktopDao />
       </MHidden>
       <MHidden width="mdUp">
-        <IPadDao />
+        <MHidden width="smDown">
+          <IPadDao />
+        </MHidden>
+        <MHidden width="smUp">
+          <IPhoneDao />
+        </MHidden>
       </MHidden>
     </>
   );
