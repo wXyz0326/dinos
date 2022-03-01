@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopRoadmap from './DesktopRoadmap';
 import IPadRoadmap from './IPadRoadmap';
+import IPhoneRoadmap from './IPhoneRoadmap';
 
 // ----------------------------------------------------------------------------------
 
@@ -53,11 +54,20 @@ export default function Roadmap() {
         />
       </MHidden>
       <MHidden width="mdUp">
-        <IPadRoadmap
-          data={data}
-          selectedPosition={selectedPosition}
-          setSelectedPosition={setSelectedPosition}
-        />
+        <MHidden width="smDown">
+          <IPadRoadmap
+            data={data}
+            selectedPosition={selectedPosition}
+            setSelectedPosition={setSelectedPosition}
+          />
+        </MHidden>
+        <MHidden width="smUp">
+          <IPhoneRoadmap
+            data={data}
+            selectedPosition={selectedPosition}
+            setSelectedPosition={setSelectedPosition}
+          />
+        </MHidden>
       </MHidden>
     </>
 

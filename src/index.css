@@ -48,3 +48,15 @@ code {
   bottom: 0;
   transform-origin: right bottom;
 }
+
+.roadmapLine-vertical {
+  width: 5px;
+  background: #424242;
+  border-radius: 5px
+}
+
+.roadmapLine-vertical-active {
+  width: 5px;
+  background: #ca3bfd;
+  border-radius: 5px
+}
