@@ -19,7 +19,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 /* ------------------------------------------------------------------------------ */
 
-export default function IPadHeroSection() {
+export default function IPadHeroSection({ currentAccount, mint, connectWallet }) {
   return (
     <Box position="relative" mt={10}>
       <Box position="absolute" top="20%" width="100%">
@@ -63,7 +63,13 @@ export default function IPadHeroSection() {
         </Typography>
         <Stack direction="row" alignItems="center" spacing={5} ml={2}>
           <Incrementer available={3} />
-          <ColorButton>Mint</ColorButton>
+          {
+            currentAccount ? (
+              <ColorButton onClick={mint}>Mint</ColorButton>
+            ) : (
+              <ColorButton onClick={connectWallet}>Connect wallet</ColorButton>
+            )
+          }
         </Stack>
       </Box>
 
