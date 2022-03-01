@@ -58,7 +58,6 @@ function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onC
     <LinkStyle
       to={path}
       component={RouterLink}
-      // href={path}
       sx={{
         ...(isHome && { color: 'common.white' }),
         ...(isOffset && { color: 'text.primary' }),

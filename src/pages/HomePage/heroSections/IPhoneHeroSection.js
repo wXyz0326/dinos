@@ -23,32 +23,32 @@ export default function IPhoneHeroSection() {
     <Box position="relative" mt={10}>
       <Box position="absolute" top="20%" width="100%">
         <Typography
-          fontSize={80}
+          fontSize={40}
           fontWeight={900}
           textTransform="uppercase"
           color={grey[900]}
           textAlign="center"
-          mt={20}
+          mt={12}
         >
           DRIPPING dino`s
         </Typography>
       </Box>
 
-      <Box ml={6} mt={18} zIndex={99}>
+      <Box ml={3} mt={14} zIndex={99}>
         <Typography
           color="primary"
           textTransform="uppercase"
-          fontSize={20}
+          fontSize={18}
           fontWeight={500}
-          mb={5}
+          mb={3}
         >
           Welcome To The
         </Typography>
         <Typography
           color={grey[100]}
           textTransform="uppercase"
-          fontSize={100}
-          fontWeight={900}
+          fontSize={46}
+          fontWeight={800}
           lineHeight={0.5}
         >
           Dripping <br />
@@ -56,32 +56,32 @@ export default function IPhoneHeroSection() {
             component="span"
             color="primary"
             textTransform="uppercase"
-            fontSize={100}
+            fontSize={46}
             fontWeight={900}
           >Dino's</Typography>
         </Typography>
-        <Stack direction="row" alignItems="center" spacing={5} ml={2}>
+        <Stack direction="row" alignItems="center" spacing={5}>
           <Incrementer available={3} />
           <ColorButton>Mint</ColorButton>
         </Stack>
       </Box>
 
       <Box mt={10} zIndex={99}>
-        <Grid container spacing={3} alignItems="flex-end">
-          <Grid item sm={9}>
-            <Box component="img" src="/assets/images/hero.png" width="100%" alt="" sx={{ zIndex: 99 }} />
+        <Grid container spacing={1} alignItems="flex-end">
+          <Grid item xs={8}>
+            <Box component="img" src="/assets/images/hero_iPhone.png" width="100%" alt="" sx={{ zIndex: 99 }} position="relative" />
           </Grid>
-          <Grid item sm={3}>
+          <Grid item xs={4}>
             <Stack direction="row" justifyContent="center" alignItems="center">
-              <IconButton sx={{ color: '#F2F2F2', fontSize: 36 }}>
+              <IconButton sx={{ color: '#F2F2F2', fontSize: 24 }}>
                 <Icon icon="ant-design:instagram-filled" />
               </IconButton>
 
-              <IconButton sx={{ color: '#F2F2F2', fontSize: 36 }}>
+              <IconButton sx={{ color: '#F2F2F2', fontSize: 24 }}>
                 <Icon icon="akar-icons:discord-fill" />
               </IconButton>
 
-              <IconButton sx={{ color: '#F2F2F2', fontSize: 36 }}>
+              <IconButton sx={{ color: '#F2F2F2', fontSize: 24 }}>
                 <Icon icon="akar-icons:twitter-fill" />
               </IconButton>
             </Stack>

@@ -60,7 +60,7 @@ function MenuMobileItem({ item, isActive }) {
       sx={{
         ...(isActive && { color: '#CA3BFD' }),
         color: '#F2F2F2',
-        py: 5
+        py: 3
       }}
     >
       {
@@ -86,14 +86,14 @@ function MenuMobileItem({ item, isActive }) {
   );
 }
 
-MobileNavbar.propTypes = {
+IPhoneNavbar.propTypes = {
   isOffset: PropTypes.bool,
   isHome: PropTypes.bool
 };
 
 // ----------------------------------------------------------------------
 
-export default function MobileNavbar({ navConfig }) {
+export default function IPhoneNavbar({ navConfig }) {
   const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -158,18 +158,18 @@ export default function MobileNavbar({ navConfig }) {
 
         <Box position="absolute" top="50%" width="100%">
           <Typography
-            fontSize={80}
+            fontSize={38}
             fontWeight={900}
             textTransform="uppercase"
             color={grey[900]}
             textAlign="center"
-            sx={{ filter: 'blur(4px)' }}
+            sx={{ filter: 'blur(2px)' }}
           >
             DRIPPING dino`s
           </Typography>
         </Box>
 
-        <Scrollbar sx={{ position: 'relative' }}>
+        <Scrollbar>
           <List disablePadding sx={{ my: 6 }}>
             {navConfig.map((link) => (
               <MenuMobileItem

@@ -69,7 +69,7 @@ export default function IPadHeroSection() {
       <Box mt={10} zIndex={99}>
         <Grid container spacing={3} alignItems="flex-end">
           <Grid item sm={9}>
-            <Box component="img" src="/assets/images/hero.png" width="100%" alt="" sx={{ zIndex: 99 }} />
+            <Box component="img" src="/assets/images/hero.png" width="100%" alt="" sx={{ zIndex: 99 }} position="relative" />
           </Grid>
           <Grid item sm={3}>
             <Stack direction="row" justifyContent="center" alignItems="center">

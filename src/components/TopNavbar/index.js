@@ -7,6 +7,7 @@ import useOffSetTop from '../../hooks/useOffSetTop';
 import MHidden from '../@mui-extend/MHidden';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
+import IPhoneNavbar from './IPhoneNavbar';
 
 // ----------------------------------------------------------------------
 
@@ -113,7 +114,12 @@ export default function TopNavbar() {
           </MHidden>
 
           <MHidden width="mdUp">
-            <MobileNavbar isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            <MHidden width="smDown">
+              <MobileNavbar isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            </MHidden>
+            <MHidden width="smUp">
+              <IPhoneNavbar isOffset={isOffset} isHome={isHome} navConfig={navConfig} />
+            </MHidden>
           </MHidden>
         </Container>
       </ToolbarStyle>
