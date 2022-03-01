@@ -3,7 +3,8 @@ import React, { createContext, useReducer } from 'react';
 
 const initialState = {
   walletConnected: false,
-  walletAddress: ''
+  walletAddress: '',
+  mintAmount: 1,
 };
 
 const handlers = {
@@ -18,6 +19,12 @@ const handlers = {
       ...state,
       walletAddress: action.payload
     };
+  },
+  SET_MINT_AMOUNT: (state, action) => {
+    return {
+      ...state,
+      mintAmount: action.payload
+    };
   }
 };
 
@@ -27,22 +34,25 @@ const reducer = (state, action) =>
 //  Context
 const WalletContext = createContext({
   ...initialState,
-  connectWallet: () => Promise.resolve(),
+  setMintAmount: () => Promise.resolve(),
 });
 
 //  Provider
 function WalletProvider({ children }) {
-  const [state] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-  const connectWallet = () => {
-
+  const setMintAmount = (newMintAmount) => {
+    dispatch({
+      type: 'SET_MINT_AMOUNT',
+      payload: newMintAmount
+    });
   };
 
   return (
     <WalletContext.Provider
       value={{
         ...state,
-        connectWallet,
+        setMintAmount,
       }}
     >
       {children}

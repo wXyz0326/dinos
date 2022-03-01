@@ -1,18 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import { Icon } from '@iconify/react';
 import plusFill from '@iconify/icons-eva/plus-fill';
 import minusFill from '@iconify/icons-eva/minus-fill';
 import MIconButton from './@mui-extend/MIconButton';
+import useWallet from '../hooks/useWallet';
 
 export default function Incrementer({ available }) {
-  const [value, setValue] = useState(1);
+  const { mintAmount, setMintAmount } = useWallet();
 
   const incrementQuantity = () => {
-    setValue(value + 1);
+    setMintAmount(mintAmount + 1);
   };
   const decrementQuantity = () => {
-    setValue(value - 1);
+    setMintAmount(mintAmount - 1);
   };
 
   return (
@@ -28,7 +29,7 @@ export default function Incrementer({ available }) {
         borderColor: 'grey.50032'
       }}
     >
-      <MIconButton size="small" color="inherit" disabled={value <= 1} onClick={decrementQuantity}>
+      <MIconButton size="small" color="inherit" disabled={mintAmount <= 1} onClick={decrementQuantity}>
         <Icon icon={minusFill} width={16} height={24} />
       </MIconButton>
       <Typography
@@ -40,9 +41,9 @@ export default function Incrementer({ available }) {
           display: 'inline-block'
         }}
       >
-        {value}
+        {mintAmount}
       </Typography>
-      <MIconButton size="small" color="inherit" disabled={value >= available} onClick={incrementQuantity}>
+      <MIconButton size="small" color="inherit" disabled={mintAmount >= available} onClick={incrementQuantity}>
         <Icon icon={plusFill} width={16} height={24} />
       </MIconButton>
     </Box>
