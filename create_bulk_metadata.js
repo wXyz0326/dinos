@@ -20,14 +20,14 @@ const startCreating = async () => {
 
   for (let i = 0; i < 8000; i++) {
     let tempMetadata = {
-      name: `${namePrefix} #${i}.json`,
+      name: `${namePrefix} #${i}`,
       description: description,
       image: baseUri,
       // image: `${baseUri}/${shortName}.png`,
       // attributes: tempAttributes,
     };
     fs.writeFileSync(
-      `${buildDir}/json/${i}.json`,
+      `${buildDir}/json/${i}`,
       JSON.stringify(tempMetadata, null, 2)
     );
   }

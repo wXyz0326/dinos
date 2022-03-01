@@ -1,13 +1,14 @@
 import React from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, AppBar, Toolbar, Container, useMediaQuery, Stack, IconButton } from '@mui/material';
+import { Box, AppBar, Toolbar, Container, useMediaQuery, Stack, IconButton, Link } from '@mui/material';
 import { Icon } from '@iconify/react';
 import useOffSetTop from '../../hooks/useOffSetTop';
 import MHidden from '../@mui-extend/MHidden';
 import DesktopNavbar from './DesktopNavbar';
 import MobileNavbar from './MobileNavbar';
 import IPhoneNavbar from './IPhoneNavbar';
+import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
 
 // ----------------------------------------------------------------------
 
@@ -99,15 +100,15 @@ export default function TopNavbar() {
             />
 
             <Stack direction="row" justifyContent="center" alignItems="center" sx={{ borderLeft: '1px solid #F2F2F2' }} pl={3}>
-              <IconButton sx={{ color: '#F2F2F2' }}>
+              <IconButton sx={{ color: '#F2F2F2' }} component={Link} href={INSTAGRAM_URL}>
                 <Icon icon="ant-design:instagram-filled" />
               </IconButton>
 
-              <IconButton sx={{ color: '#F2F2F2' }}>
+              <IconButton sx={{ color: '#F2F2F2' }} component={Link} href={DISCORD_URL}>
                 <Icon icon="akar-icons:discord-fill" />
               </IconButton>
 
-              <IconButton sx={{ color: '#F2F2F2' }}>
+              <IconButton sx={{ color: '#F2F2F2' }} component={Link} href={TWITTER_URL}>
                 <Icon icon="akar-icons:twitter-fill" />
               </IconButton>
             </Stack>

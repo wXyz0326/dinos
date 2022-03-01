@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Stack, Typography, styled } from '@mui/material';
 import { grey, purple } from '@mui/material/colors';
+import { useEthers } from '@usedapp/core';
 import Incrementer from '../../../components/Incrementor';
 
 /* ------------------------------------------------------------------------------ */
@@ -8,7 +9,6 @@ import Incrementer from '../../../components/Incrementor';
 const ColorButton = styled(Button)(({ theme }) => ({
   color: theme.palette.getContrastText(grey[100]),
   fontSize: 20,
-  width: '20%',
   backgroundColor: grey[100],
   '&:hover': {
     backgroundColor: grey[400],
@@ -18,6 +18,10 @@ const ColorButton = styled(Button)(({ theme }) => ({
 /* ------------------------------------------------------------------------------ */
 
 export default function DesktopHeroSection() {
+  const { activateBrowserWallet, account } = useEthers();
+  const mint = () => {
+
+  };
   return (
     <Stack
       height={{ xl: 750, lg: 600, md: 400, sm: 300, xs: 200 }}
@@ -72,7 +76,13 @@ export default function DesktopHeroSection() {
         </Typography>
         <Stack direction="row" alignItems="center" spacing={5} ml={2}>
           <Incrementer available={3} />
-          <ColorButton>Mint</ColorButton>
+          {
+            account ? (
+              <ColorButton onClick={mint}>Mint</ColorButton>
+            ) : (
+              <ColorButton onClick={activateBrowserWallet}>Connect wallet</ColorButton>
+            )
+          }
         </Stack>
       </Box>
     </Stack>

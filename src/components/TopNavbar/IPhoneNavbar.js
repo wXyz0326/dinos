@@ -15,11 +15,13 @@ import {
   IconButton,
   Badge,
   Typography,
-  Box
+  Box,
+  Link
 } from '@mui/material';
 import { grey } from '@mui/material/colors';
 import Scrollbar from '../Scrollbar';
 import MIconButton from '../@mui-extend/MIconButton';
+import { DISCORD_URL, INSTAGRAM_URL, TWITTER_URL } from '../../constants';
 
 // ----------------------------------------------------------------------
 
@@ -180,15 +182,15 @@ export default function IPhoneNavbar({ navConfig }) {
             ))}
           </List>
           <Stack direction="row" justifyContent="center" alignItems="center">
-            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }} component={Link} href={INSTAGRAM_URL}>
               <Icon icon="ant-design:instagram-filled" />
             </IconButton>
 
-            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }} component={Link} href={DISCORD_URL}>
               <Icon icon="akar-icons:discord-fill" />
             </IconButton>
 
-            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }}>
+            <IconButton sx={{ color: '#F2F2F2', fontSize: 32 }} component={Link} href={TWITTER_URL}>
               <Icon icon="akar-icons:twitter-fill" />
             </IconButton>
           </Stack>
