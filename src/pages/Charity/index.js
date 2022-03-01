@@ -2,6 +2,7 @@ import React from 'react';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopCharity from './DesktopCharity';
 import IPadCharity from './IPadCharity';
+import IPhoneCharity from './IPhoneCharity';
 
 export default function Charity() {
   return (
@@ -10,7 +11,12 @@ export default function Charity() {
         <DesktopCharity />
       </MHidden>
       <MHidden width="mdUp">
-        <IPadCharity />
+        <MHidden width="smDown">
+          <IPadCharity />
+        </MHidden>
+        <MHidden width="smUp">
+          <IPhoneCharity />
+        </MHidden>
       </MHidden>
     </>
   );
