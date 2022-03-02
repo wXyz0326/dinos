@@ -8,8 +8,6 @@ import DesktopFlowBar from './flowBars/DesktopFlowBar';
 import IPadFlowBar from './flowBars/IPadFlowBar';
 import IPhoneHeroSection from './heroSections/IPhoneHeroSection';
 import IPhoneFlowBar from './flowBars/IPhoneFlowBar';
-import DesktopAndIPadIntroSection from './introSections/DesktopAndIPadIntroSection';
-import IPhoneIntroSection from './introSections/IPhoneIntroSection';
 import useWallet from '../../hooks/useWallet';
 import { ABI, CONTRACT_ADDRESS, NFT_PRICE } from '../../constants';
 
@@ -99,30 +97,6 @@ export default function HomePage() {
         </MHidden>
       </MHidden>
 
-      <MHidden width="mdDown">
-        <DesktopAndIPadIntroSection />
-      </MHidden>
-
-      <MHidden width="mdUp">
-        <MHidden width="smDown">
-          <DesktopAndIPadIntroSection />
-        </MHidden>
-        <MHidden width="smUp">
-          <IPhoneIntroSection />
-        </MHidden>
-      </MHidden>
-
-      <MHidden width="mdDown">
-        <DesktopFlowBar />
-      </MHidden>
-      <MHidden width="mdUp">
-        <MHidden width="smDown">
-          <IPadFlowBar />
-        </MHidden>
-        <MHidden width="smUp">
-          <IPhoneFlowBar />
-        </MHidden>
-      </MHidden>
       <Snackbar
         open={isOpened}
         autoHideDuration={5000}

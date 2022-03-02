@@ -7,6 +7,7 @@ import Dao from './pages/Dao';
 import Charity from './pages/Charity';
 import Shop from './pages/Shop';
 import MainLayout from './layouts/MainLayout';
+import AboutUs from './pages/AboutUs';
 
 export default function Routes() {
   return useRoutes([
@@ -17,6 +18,10 @@ export default function Routes() {
         {
           path: '/',
           element: <HomePage />
+        },
+        {
+          path: '/about-us',
+          element: <AboutUs />
         },
         {
           path: '/collection',

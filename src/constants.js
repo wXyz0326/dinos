@@ -624,3 +624,5 @@ export const ABI = [
     "type": "function"
   }
 ];
+export const APP_BAR_MOBILE = 30;
+export const APP_BAR_DESKTOP = 70;

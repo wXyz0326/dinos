@@ -21,7 +21,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 export default function DesktopHeroSection({ currentAccount, mint, connectWallet }) {
   return (
     <Stack
-      height={{ xl: 750, lg: 600, md: 400, sm: 300, xs: 200 }}
+      height="93.5vh"
       maxWidth="2xl"
       position="relative"
       justifyContent="center"

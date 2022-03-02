@@ -3,7 +3,7 @@ import { Stack, Typography, Box } from '@mui/material';
 
 export default function IPhoneIntroSection() {
   return (
-    <Stack mx={3} my={5} spacing={8}>
+    <Stack mx={3} mt={10} pb={6} spacing={8}>
       <Stack spacing={2}>
         <Box>
           <Typography fontSize={16}>
