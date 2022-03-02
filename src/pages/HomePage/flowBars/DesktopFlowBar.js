@@ -10,25 +10,19 @@ export default function DesktopFlowBar({ customSx }) {
       sx={{ height: { xl: 60, lg: 60, md: 40, sm: 30 }, ...customSx }}
       justifyContent="center"
     >
-      <Stack direction="row" spacing={5}>
-        {
-          [0, 1, 2, 3, 4].map(itemIndex => (
-            <marquee key={itemIndex}>
-              <Stack direction="row" spacing={5} alignItems="center">
-                <Icon icon="emojione-monotone:eight-pointed-star" />
-                <Typography
-                  textTransform="uppercase"
-                  color={grey[100]}
-                  fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}
-                  fontFamily="'Dela Gothic One', cursive"
-                >
-                  More than just fashion
-                </Typography>
-              </Stack>
-            </marquee>
-          ))
-        }
-      </Stack>
+      <marquee>
+        <Stack direction="row" spacing={5} alignItems="center">
+          <Icon icon="emojione-monotone:eight-pointed-star" />
+          <Typography
+            textTransform="uppercase"
+            color={grey[100]}
+            fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}
+            fontFamily="'Dela Gothic One', cursive"
+          >
+            More than just fashion
+          </Typography>
+        </Stack>
+      </marquee>
     </Stack>
   );
 };

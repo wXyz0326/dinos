@@ -16,13 +16,13 @@ const navConfig = [
   { title: 'Home', path: '/', ready: true },
   { title: 'Collection', path: '/collection', ready: false },
   { title: 'Roadmap', path: '/roadmap', ready: true },
-  { title: 'DAO', path: '/dao', ready: true },
+  { title: 'DAO', path: '/dao', ready: false },
   { title: 'Charity', path: '/charity', ready: true },
   { title: 'Shop', path: '/shop', ready: false },
 ];
 
 const APP_BAR_MOBILE = 30;
-const APP_BAR_DESKTOP = 60;
+const APP_BAR_DESKTOP = 70;
 
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
   height: APP_BAR_MOBILE,
@@ -79,7 +79,7 @@ export default function TopNavbar() {
             pr={{ xl: 6, lg: 3, md: 6, sm: 3, xs: 3 }}
             pl={{ xl: 3, lg: 1, md: 3 }}
             justifyContent="center"
-            sx={{ borderRight: { xl: '1px solid #F2F2F2', lg: '1px solid #F2F2F2', md: '1px solid #F2F2F2', sm: 'none' } }}
+            // sx={{ borderRight: { xl: '1px solid #F2F2F2', lg: '1px solid #F2F2F2', md: '1px solid #F2F2F2', sm: 'none' } }}
           >
             <RouterLink to="/">
               <img
@@ -99,7 +99,13 @@ export default function TopNavbar() {
               navConfig={navConfig}
             />
 
-            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ borderLeft: '1px solid #F2F2F2' }} pl={3}>
+            <Stack 
+              direction="row" 
+              justifyContent="center" 
+              alignItems="center" 
+              // sx={{ borderLeft: '1px solid #F2F2F2' }} 
+              pl={3}
+            >
               <IconButton sx={{ color: '#F2F2F2' }} component={Link} href={INSTAGRAM_URL}>
                 <Icon icon="ant-design:instagram-filled" />
               </IconButton>

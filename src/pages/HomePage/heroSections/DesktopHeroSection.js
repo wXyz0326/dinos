@@ -26,14 +26,14 @@ export default function DesktopHeroSection({ currentAccount, mint, connectWallet
       position="relative"
       justifyContent="center"
     >
-      <Typography
+      {/* <Typography
         fontSize={{ xl: 200, lg: 120, md: 80, sm: 60, xs: 30 }}
         fontWeight={900}
         textTransform="uppercase"
         color={grey[800]}
         textAlign="center"
         mt={20}
-      >DRIPPING dino`s</Typography>
+      >DRIPPING dino`s</Typography> */}
 
       <Box position="absolute" bottom={0}>
         <Box

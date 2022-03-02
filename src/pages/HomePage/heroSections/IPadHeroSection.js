@@ -22,7 +22,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 export default function IPadHeroSection({ currentAccount, mint, connectWallet }) {
   return (
     <Box position="relative" mt={10}>
-      <Box position="absolute" top="20%" width="100%">
+      {/* <Box position="absolute" top="20%" width="100%">
         <Typography
           fontSize={80}
           fontWeight={900}
@@ -33,7 +33,7 @@ export default function IPadHeroSection({ currentAccount, mint, connectWallet })
         >
           DRIPPING dino`s
         </Typography>
-      </Box>
+      </Box> */}
 
       <Box ml={6} mt={18} zIndex={99}>
         <Typography
