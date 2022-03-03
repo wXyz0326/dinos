@@ -3,7 +3,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material';
 
 export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosition }) {
   return (
-    <Box sx={{ mt: 25 }}>
+    <Box pt={20}>
       <Grid container columns={2}>
         <Grid item md={1}>
           <Stack direction="row" justifyContent="center">
@@ -151,14 +151,14 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
         </Grid>
 
         <Grid item md={1}>
-          <Stack width="70%" mx="auto" spacing={4}>
+          <Stack width="50%" mx="auto" spacing={2}>
             <Box component="img" alt="roadmap_hero" src={`/assets/images/${data[selectedPosition].image}`} />
 
             <Typography color="primary" textTransform="uppercase" fontSize={24} fontWeight={600} mb={10}>
               {data[selectedPosition].title}
             </Typography>
 
-            <Typography fontSize={20}>{data[selectedPosition].content}</Typography>
+            <Typography fontSize={14}>{data[selectedPosition].content}</Typography>
           </Stack>
         </Grid>
       </Grid>

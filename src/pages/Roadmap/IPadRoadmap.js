@@ -180,7 +180,7 @@ export default function IPadRoadmap({ data, selectedPosition, setSelectedPositio
             <Box
               component="img"
               alt="roadmap_hero"
-              src={`/assets/images/${data[selectedPosition].image.split('.')[0]}_mobile.${data[selectedPosition].image.split('.')[1]}`}
+              src={`/assets/images/${data[selectedPosition].image}`}
             />
           </Grid>
           <Grid item sm={6} mt={20}>

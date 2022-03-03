@@ -14,7 +14,7 @@ export default function IPhoneRoadmap({ data, selectedPosition, setSelectedPosit
 
       <Stack direction="row" justifyContent="end" mt={6} mb={12}>
         <Box width="70%">
-          <Box component="img" src={`/assets/images/${data[0].image.split('.')[0]}_mobile.${data[0].image.split('.')[1]}`} width="100%" />
+          <Box component="img" src={`/assets/images/${data[0].image}`} width="100%" />
           <Typography mt={2}>{data[0].content}</Typography>
         </Box>
       </Stack>
@@ -26,7 +26,7 @@ export default function IPhoneRoadmap({ data, selectedPosition, setSelectedPosit
 
       <Stack direction="row" justifyContent="end" mt={6} mb={12}>
         <Box width="70%">
-          <Box component="img" src={`/assets/images/${data[1].image.split('.')[0]}_mobile.${data[1].image.split('.')[1]}`} width="100%" />
+          <Box component="img" src={`/assets/images/${data[1].image}`} width="100%" />
           <Typography mt={2}>{data[1].content}</Typography>
         </Box>
       </Stack>
@@ -38,7 +38,7 @@ export default function IPhoneRoadmap({ data, selectedPosition, setSelectedPosit
 
       <Stack direction="row" justifyContent="end" mt={6} mb={12}>
         <Box width="70%">
-          <Box component="img" src={`/assets/images/${data[2].image.split('.')[0]}_mobile.${data[2].image.split('.')[1]}`} width="100%" />
+          <Box component="img" src={`/assets/images/${data[2].image}`} width="100%" />
           <Typography mt={2}>{data[2].content}</Typography>
         </Box>
       </Stack>
@@ -50,7 +50,7 @@ export default function IPhoneRoadmap({ data, selectedPosition, setSelectedPosit
 
       <Stack direction="row" justifyContent="end" mt={6} mb={12}>
         <Box width="70%">
-          <Box component="img" src={`/assets/images/${data[3].image.split('.')[0]}_mobile.${data[3].image.split('.')[1]}`} width="100%" />
+          <Box component="img" src={`/assets/images/${data[3].image}`} width="100%" />
           <Typography mt={2}>{data[3].content}</Typography>
         </Box>
       </Stack>
@@ -62,7 +62,7 @@ export default function IPhoneRoadmap({ data, selectedPosition, setSelectedPosit
 
       <Stack direction="row" justifyContent="end" mt={6} mb={12}>
         <Box width="70%">
-          <Box component="img" src={`/assets/images/${data[4].image.split('.')[0]}_mobile.${data[4].image.split('.')[1]}`} width="100%" />
+          <Box component="img" src={`/assets/images/${data[4].image}`} width="100%" />
           <Typography mt={2}>{data[4].content}</Typography>
         </Box>
       </Stack>

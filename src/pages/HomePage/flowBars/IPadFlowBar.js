@@ -16,7 +16,7 @@ export default function IPadFlowBar({ customSx }) {
             fontFamily="'Dela Gothic One', cursive"
             fontWeight={500}
           >
-            More than just fashion
+            Private Sale opens Friday the 4th of March at 6 PM UTC
           </Typography>
         </Stack>
       </marquee>

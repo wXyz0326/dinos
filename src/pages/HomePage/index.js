@@ -52,7 +52,7 @@ export default function HomePage() {
       const account = accounts[0];
       setCurrentAccount(account);
     } else {
-      return openAlert('warning', 'No authorized account found.');
+      return openAlert('warning', 'No authorized account found. Please make your wallet authorized.');
     }
   };
 

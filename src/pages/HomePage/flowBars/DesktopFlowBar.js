@@ -19,7 +19,7 @@ export default function DesktopFlowBar({ customSx }) {
             fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}
             fontFamily="'Dela Gothic One', cursive"
           >
-            More than just fashion
+            Private Sale opens Friday the 4th of March at 6 PM UTC
           </Typography>
         </Stack>
       </marquee>
