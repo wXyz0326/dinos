@@ -52,11 +52,11 @@ MenuDesktopItem.propTypes = {
 };
 
 function MenuDesktopItem({ item, pathname, isHome, isOpen, isOffset, onOpen, onClose }) {
-  const { title, path } = item;
+  const { title, path, ready } = item;
   const isActive = pathname === path;
   return (
     <LinkStyle
-      to={path}
+      to={ready ? path : '#'}
       component={RouterLink}
       sx={{
         ...(isHome && { color: 'common.white' }),

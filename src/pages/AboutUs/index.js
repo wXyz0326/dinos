@@ -1,11 +1,12 @@
 import React from 'react';
+import { Box } from '@mui/material';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopAndIPadIntroSection from './DesktopAndIPadIntroSection';
 import IPhoneIntroSection from './IPhoneIntroSection';
 
 export default function AboutUs() {
   return (
-    <>
+    <Box>
       <MHidden width="mdDown">
         <DesktopAndIPadIntroSection />
       </MHidden>
@@ -18,6 +19,6 @@ export default function AboutUs() {
           <IPhoneIntroSection />
         </MHidden>
       </MHidden>
-    </>
+    </Box>
   );
 }
