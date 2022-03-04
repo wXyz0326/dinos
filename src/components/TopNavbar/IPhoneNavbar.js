@@ -171,8 +171,8 @@ export default function IPhoneNavbar({ navConfig }) {
           </Typography>
         </Box>
 
-        <Scrollbar>
-          <List disablePadding sx={{ my: 6 }}>
+        <Scrollbar position="relative" sx={{ zIndex: 99 }}>
+          <List disablePadding sx={{ mt: 6, mb: 3 }}>
             {navConfig.map((link) => (
               <MenuMobileItem
                 key={link.title}
@@ -195,6 +195,7 @@ export default function IPhoneNavbar({ navConfig }) {
             </IconButton>
           </Stack>
         </Scrollbar>
+
         <Box width="45%" position="absolute" bottom={0}>
           <Box
             component="img"

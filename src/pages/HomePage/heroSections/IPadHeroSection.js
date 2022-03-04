@@ -62,10 +62,10 @@ export default function IPadHeroSection({ currentAccount, mint, connectWallet })
 
       <Box zIndex={99} position="absolute" bottom={60}>
         <Grid container spacing={3} alignItems="flex-end">
-          <Grid item sm={9}>
+          <Grid item sm={7}>
             <Box component="img" src="/assets/images/hero.png" width="100%" alt="" sx={{ zIndex: 99 }} position="relative" />
           </Grid>
-          <Grid item sm={3}>
+          <Grid item sm={5}>
             <Stack direction="row" justifyContent="center" alignItems="center">
               <IconButton sx={{ color: '#F2F2F2', fontSize: 36 }} component={Link} href={INSTAGRAM_URL}>
                 <Icon icon="ant-design:instagram-filled" />

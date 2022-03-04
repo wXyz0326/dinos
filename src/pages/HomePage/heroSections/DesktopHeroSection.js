@@ -41,7 +41,7 @@ export default function DesktopHeroSection({ currentAccount, mint, connectWallet
           component="img"
           alt="hero"
           src="/assets/images/hero.png"
-          sx={{ width: '45%' }}
+          sx={{ width: '40%' }}
         />
       </Box>
 
