@@ -27,6 +27,7 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
                   zIndex={9}
                   sx={{ cursor: 'pointer' }}
                   onClick={() => setSelectedPosition(0)}
+                  width="25%"
                 />
                 {
                   selectedPosition > 0 ? (
@@ -57,6 +58,7 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
                   zIndex={9}
                   sx={{ cursor: 'pointer' }}
                   onClick={() => setSelectedPosition(1)}
+                  width="25%"
                 />
                 {
                   selectedPosition > 1 ? (
@@ -86,6 +88,7 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
                   zIndex={9}
                   sx={{ cursor: 'pointer' }}
                   onClick={() => setSelectedPosition(2)}
+                  width="25%"
                 />
                 {
                   selectedPosition > 2 ? (
@@ -116,6 +119,7 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
                   zIndex={9}
                   sx={{ cursor: 'pointer' }}
                   onClick={() => setSelectedPosition(3)}
+                  width="25%"
                 />
                 {
                   selectedPosition > 3 ? (
@@ -144,6 +148,7 @@ export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosi
                   zIndex={9}
                   sx={{ cursor: 'pointer' }}
                   onClick={() => setSelectedPosition(4)}
+                  width="25%"
                 />
               </Stack>
             </Box>

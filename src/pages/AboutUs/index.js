@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopAndIPadIntroSection from './DesktopAndIPadIntroSection';
 import IPhoneIntroSection from './IPhoneIntroSection';
