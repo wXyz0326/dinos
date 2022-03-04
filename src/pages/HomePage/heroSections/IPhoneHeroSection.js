@@ -21,21 +21,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
 export default function IPhoneHeroSection({ currentAccount, mint, connectWallet }) {
   return (
-    <Box position="relative" mt={10}>
-      {/* <Box position="absolute" top="20%" width="100%">
-        <Typography
-          fontSize={40}
-          fontWeight={900}
-          textTransform="uppercase"
-          color={grey[900]}
-          textAlign="center"
-          mt={12}
-        >
-          DRIPPING dino`s
-        </Typography>
-      </Box> */}
-
-      <Box ml={3} mt={14} zIndex={99}>
+    <Box position="relative" pt={10} height="100vh">
+      <Box ml={3} zIndex={99}>
         <Typography
           color="primary"
           textTransform="uppercase"
@@ -73,7 +60,7 @@ export default function IPhoneHeroSection({ currentAccount, mint, connectWallet 
         </Stack>
       </Box>
 
-      <Box mt={10} zIndex={99}>
+      <Box mt={5} zIndex={99} position="absolute" bottom={40}>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item xs={8}>
             <Box component="img" src="/assets/images/hero_iPhone.png" width="100%" alt="" sx={{ zIndex: 99 }} position="relative" />
@@ -95,6 +82,23 @@ export default function IPhoneHeroSection({ currentAccount, mint, connectWallet 
           </Grid>
         </Grid>
       </Box>
+
+      <Stack className="skewBar" sx={{ height: 40 }} justifyContent="center" position="absolute" bottom={0}>
+        <marquee>
+          <Stack direction="row" spacing={5} alignItems="center">
+            <Icon icon="emojione-monotone:eight-pointed-star" />
+            <Typography
+              textTransform="uppercase"
+              color={grey[100]}
+              fontSize={20}
+              fontFamily="'Dela Gothic One', cursive"
+              fontWeight={500}
+            >
+              Private Sale opens Friday the 4th of March at 6 PM UTC
+            </Typography>
+          </Stack>
+        </marquee>
+      </Stack>
     </Box>
   );
 }

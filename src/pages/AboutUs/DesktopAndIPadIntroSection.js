@@ -3,7 +3,7 @@ import { Stack, Grid, Typography, Box } from '@mui/material';
 
 export default function DesktopAndIPadIntroSection() {
   return (
-    <Stack mx={{ xl: 16, sm: 6 }} pt={20} spacing={8}>
+    <Stack mx={{ xl: 16, sm: 6 }} pt={20} pb={10} justifyContent="space-between" height="100vh" overflow="hidden">
       <Box>
         <Grid container alignItems="center" spacing={{ xl: 12, sm: 4 }}>
           <Grid item md={9} sm={6}>
@@ -25,6 +25,7 @@ export default function DesktopAndIPadIntroSection() {
           <Grid item md={3} sm={6}>
             <Box position="relative">
               <Box component="img" src="/assets/images/dino_1.png" alt="" />
+              <Box component="img" src="/assets/images/shadow_1.png" alt="" position="absolute" />
             </Box>
           </Grid>
 

@@ -15,8 +15,8 @@ code {
 .skewBar {
   width: 100%;
   background: #424242;
-  z-index: 999999;
   bottom: 0;
+  z-Index: 100
   /* transform-origin: left bottom; */
   /* transform: skewY(-3deg); */
 }

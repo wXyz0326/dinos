@@ -3,7 +3,7 @@ import { Box, Grid, Stack, Typography } from '@mui/material';
 
 export default function DesktopRoadmap({ data, selectedPosition, setSelectedPosition }) {
   return (
-    <Box pt={20}>
+    <Box pt={20} height="100vh" overflow="hidden">
       <Grid container columns={2}>
         <Grid item md={1}>
           <Stack direction="row" justifyContent="center">

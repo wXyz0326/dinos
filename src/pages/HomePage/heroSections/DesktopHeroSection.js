@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Stack, Typography, styled } from '@mui/material';
 import { grey, purple } from '@mui/material/colors';
+import { Icon } from '@iconify/react';
 import Incrementer from '../../../components/Incrementor';
 
 /* ------------------------------------------------------------------------------ */
@@ -21,7 +22,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 export default function DesktopHeroSection({ currentAccount, mint, connectWallet }) {
   return (
     <Stack
-      height="93.5vh"
+      height="100vh"
       maxWidth="2xl"
       position="relative"
       justifyContent="center"
@@ -35,16 +36,16 @@ export default function DesktopHeroSection({ currentAccount, mint, connectWallet
         mt={20}
       >DRIPPING dino`s</Typography> */}
 
-      <Box position="absolute" bottom={0}>
+      <Box position="absolute" bottom={16} width="100%">
         <Box
           component="img"
           alt="hero"
           src="/assets/images/hero.png"
-          sx={{ width: { xl: 700, lg: 500, md: 300, sm: 220, xs: 140 } }}
+          sx={{ width: '45%' }}
         />
       </Box>
 
-      <Box position="absolute" right={{ xl: 300, lg: 100, md: 100, sm: 100, xs: 40 }} mt={20}>
+      <Box position="absolute" right="15%">
         <Typography
           color={purple['A400']}
           textTransform="uppercase"
@@ -82,7 +83,27 @@ export default function DesktopHeroSection({ currentAccount, mint, connectWallet
           }
         </Stack>
       </Box>
-
+      <Stack
+        className="skewBar"
+        sx={{ height: { xl: 60, lg: 60, md: 40, sm: 30 } }}
+        justifyContent="center"
+        position="absolute"
+        bottom={0}
+      >
+        <marquee>
+          <Stack direction="row" spacing={5} alignItems="center">
+            <Icon icon="emojione-monotone:eight-pointed-star" />
+            <Typography
+              textTransform="uppercase"
+              color={grey[100]}
+              fontSize={{ xl: 16, lg: 16, md: 12, sm: 10, xs: 8 }}
+              fontFamily="'Dela Gothic One', cursive"
+            >
+              Private Sale opens Friday the 4th of March at 6 PM UTC
+            </Typography>
+          </Stack>
+        </marquee>
+      </Stack>
     </Stack >
   );
 }

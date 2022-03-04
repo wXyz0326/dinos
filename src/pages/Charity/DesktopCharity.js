@@ -3,7 +3,7 @@ import { Typography, Box } from '@mui/material';
 
 export default function DesktopCharity() {
   return (
-    <Box position="relative" pt={10}>
+    <Box position="relative" pt={10} height="100vh">
       <Box position="absolute" top={150} width="100%" zIndex={5}>
         <Typography fontSize={48} fontWeight={700} textTransform="uppercase" textAlign="center">
           Charity&volunteering

@@ -6,7 +6,7 @@ import IPhoneIntroSection from './IPhoneIntroSection';
 
 export default function AboutUs() {
   return (
-    <Box>
+    <>
       <MHidden width="mdDown">
         <DesktopAndIPadIntroSection />
       </MHidden>
@@ -19,6 +19,6 @@ export default function AboutUs() {
           <IPhoneIntroSection />
         </MHidden>
       </MHidden>
-    </Box>
+    </>
   );
 }

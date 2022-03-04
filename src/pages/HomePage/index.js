@@ -4,10 +4,7 @@ import { ethers } from "ethers";
 import MHidden from '../../components/@mui-extend/MHidden';
 import DesktopHeroSection from './heroSections/DesktopHeroSection';
 import IPadHeroSection from './heroSections/IPadHeroSection';
-import DesktopFlowBar from './flowBars/DesktopFlowBar';
-import IPadFlowBar from './flowBars/IPadFlowBar';
 import IPhoneHeroSection from './heroSections/IPhoneHeroSection';
-import IPhoneFlowBar from './flowBars/IPhoneFlowBar';
 import useWallet from '../../hooks/useWallet';
 import { ABI, CONTRACT_ADDRESS, NFT_PRICE } from '../../constants';
 
@@ -80,20 +77,17 @@ export default function HomePage() {
     checkWalletIsConnected();
   }, []);
   return (
-    <Box>
+    <Box height="100vh">
       <MHidden width="mdDown">
         <DesktopHeroSection currentAccount={currentAccount} mint={mint} connectWallet={connectWallet} />
-        <DesktopFlowBar />
       </MHidden>
 
       <MHidden width="mdUp">
         <MHidden width="smDown">
           <IPadHeroSection currentAccount={currentAccount} mint={mint} connectWallet={connectWallet} />
-          <IPadFlowBar />
         </MHidden>
         <MHidden width="smUp">
           <IPhoneHeroSection currentAccount={currentAccount} mint={mint} connectWallet={connectWallet} />
-          <IPhoneFlowBar />
         </MHidden>
       </MHidden>
 
