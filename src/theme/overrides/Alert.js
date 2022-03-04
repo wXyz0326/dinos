@@ -10,7 +10,8 @@ export default function Alert(theme) {
   const isLight = theme.palette.mode === 'light';
 
   const standardStyle = (color) => ({
-    color: theme.palette[color][isLight ? 'darker' : 'lighter'],
+    // color: theme.palette[color][isLight ? 'darker' : 'lighter'],
+    color: '#F2F2f2',
     backgroundColor: theme.palette[color][isLight ? 'lighter' : 'darker'],
     '& .MuiAlert-icon': {
       color: theme.palette[color][isLight ? 'main' : 'light']
@@ -18,11 +19,13 @@ export default function Alert(theme) {
   });
 
   const filledStyle = (color) => ({
-    color: theme.palette[color].contrastText
+    // color: theme.palette[color].contrastText,
+    color: '#F2F2f2',
   });
 
   const outlinedStyle = (color) => ({
-    color: theme.palette[color][isLight ? 'darker' : 'lighter'],
+    // color: theme.palette[color][isLight ? 'darker' : 'lighter'],
+    color: '#F2F2f2',
     border: `solid 1px ${theme.palette[color][isLight ? 'light' : 'dark']}`,
     backgroundColor: theme.palette[color][isLight ? 'lighter' : 'darker'],
     '& .MuiAlert-icon': {

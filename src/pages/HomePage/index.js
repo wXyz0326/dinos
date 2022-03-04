@@ -69,7 +69,7 @@ export default function HomePage() {
         openAlert('error', 'Ethereum object doesn\'t exist');
       }
     } catch (error) {
-      openAlert('error', 'Transaction is failed.');
+      openAlert('error', error.message ? error.message : 'Transaction is failed.');
     }
   };
 
