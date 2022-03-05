@@ -13,14 +13,14 @@ const buildSetup = () => {
 };
 
 const startCreating = async () => {
-  const namePrefix = "Dinos";
-  const description = "Dinos Collection #8000";
+  const namePrefix = "Dripping Dino's";
+  const description = "A unique NFT collection of 8000 Dripping Dino’s";
   const baseUri =
     "https://ipfs.io/ipfs/QmYtV8CHKzDLDnQRWtSEuByWXmCJQHnjiY2HHNR9eBgwkZ/placeholder.png";
 
   for (let i = 0; i < 8000; i++) {
     let tempMetadata = {
-      name: `${namePrefix} #${i}`,
+      name: namePrefix,
       description: description,
       image: baseUri,
       // image: `${baseUri}/${shortName}.png`,
